@@ -52,6 +52,12 @@ namespace HerokuTest
                 .Be(false);
         }
 
+        [TestMethod]
+        public void GivenCheckBoxesPageLoadedWhenFirstCheckBoxClickedCheckBoxShouldBeAbleToBeChecked()
+        {
+            throw new NotImplementedException();
+        }
+        
         [TestCleanup]
         public void CleanUp()
         {

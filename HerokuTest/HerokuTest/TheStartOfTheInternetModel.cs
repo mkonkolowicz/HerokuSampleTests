@@ -19,7 +19,7 @@ namespace HerokuTest
 
         #region Properties
 
-        protected HtmlHyperlink CheckBoxes
+        protected HtmlHyperlink CheckBoxesPageLink
         {
             get
             {
@@ -44,7 +44,7 @@ namespace HerokuTest
 
         public VeryFirstCheckBoxesOnTheInternetPageModel ClickOnCheckBoxesLink()
         {
-            Mouse.Click(this.CheckBoxes);
+            Mouse.Click(this.CheckBoxesPageLink);
             return new VeryFirstCheckBoxesOnTheInternetPageModel(this.parent);
         }
 
