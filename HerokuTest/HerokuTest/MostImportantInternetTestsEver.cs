@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -28,7 +29,7 @@ namespace HerokuTest
         public void GivenBrowserLoadsWelcomePageSuccessfullyThenWelcomeVerbiageShouldExist()
         {
             var welcomePage = new TheStartOfTheInternetModel(Window)
-                .HeadingOfPage()
+                .HeadingOfPage
                 .Should()
                 .Contain("Welcome to the Internet");
         }
@@ -47,7 +48,8 @@ namespace HerokuTest
             var homePageModel = new TheStartOfTheInternetModel(Window);
             homePageModel.
                 ClickOnCheckBoxesLink()
-                .IsFirstCheckBoxChecked()
+                .CheckboxModels.First()
+                .IsChecked
                 .Should()
                 .Be(false);
         }

@@ -33,9 +33,12 @@ namespace HerokuTest
             get { return Me.Find<HtmlHeading1>(); }
         }
 
-        public string HeadingOfPage()
+        public string HeadingOfPage
         {
-            return PageHeading.InnerText;
+            get
+            {
+                return PageHeading.InnerText;  
+            } 
         }
 
         #endregion

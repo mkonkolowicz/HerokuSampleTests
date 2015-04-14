@@ -40,6 +40,5 @@ C:\GitHub\HerokuSampleTests\HerokuTest\HerokuTest\bin\Debug\Microsoft.VisualStud
 C:\GitHub\HerokuSampleTests\HerokuTest\HerokuTest\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Extension.xml
 C:\GitHub\HerokuSampleTests\HerokuTest\HerokuTest\bin\Debug\Microsoft.VisualStudio.TestTools.UITesting.xml
 C:\GitHub\HerokuSampleTests\HerokuTest\HerokuTest\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Common.xml
-C:\GitHub\HerokuSampleTests\HerokuTest\HerokuTest\obj\Debug\HerokuTest.csprojResolveAssemblyReference.cache
 C:\GitHub\HerokuSampleTests\HerokuTest\HerokuTest\obj\Debug\HerokuTest.dll
 C:\GitHub\HerokuSampleTests\HerokuTest\HerokuTest\obj\Debug\HerokuTest.pdb

@@ -29,6 +29,11 @@ namespace HerokuTest
             get { return Me.FindAll<HtmlCheckBox>(); }
         }
 
+        public IEnumerable<CheckboxChildModel> CheckboxModels
+        {
+            get { return this.CheckBoxes.Select(x => new CheckboxChildModel(this.parent, x)); }
+        }
+
         protected HtmlHeading3 PageHeading
         {
             get { return Me.Find<HtmlHeading3>(); }
@@ -58,5 +63,25 @@ namespace HerokuTest
         }
 
         #endregion
+    }
+
+    public class CheckboxChildModel : HtmlChildPageModelBase<HtmlCheckBox>
+    {
+        public CheckboxChildModel(BrowserWindow bw, HtmlCheckBox box) : base(bw, box)
+        {
+
+        }
+
+        public bool IsChecked
+        {
+            get { return this.Me.Checked; }
+        }
+
+        public CheckboxChildModel SetChecked(bool checkedTrue)
+        {
+
+            this.Me.Checked = checkedTrue;
+            return this;
+        }
     }
 }
