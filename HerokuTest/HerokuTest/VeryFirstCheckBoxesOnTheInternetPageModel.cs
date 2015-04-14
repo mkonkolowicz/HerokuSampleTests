@@ -13,28 +13,27 @@ namespace HerokuTest
 {
     public class VeryFirstCheckBoxesOnTheInternetPageModel : HtmlPageModelBase<HtmlDiv>
     {
-        public VeryFirstCheckBoxesOnTheInternetPageModel(BrowserWindow bw): base(bw)
+        public VeryFirstCheckBoxesOnTheInternetPageModel(BrowserWindow bw) : base(bw)
         {
-
         }
 
         protected override HtmlDiv Me
         {
-            get
-            {
-                return base.DocumentWindow.Find<HtmlDiv>("content");
-            }
+            get { return base.DocumentWindow.Find<HtmlDiv>("content"); }
         }
 
         #region Properties
+
         protected IEnumerable<HtmlCheckBox> CheckBoxes
         {
             get { return Me.FindAll<HtmlCheckBox>(); }
         }
+
         protected HtmlHeading3 PageHeading
         {
             get { return Me.Find<HtmlHeading3>(); }
         }
+
         public string HeadingOfPage
         {
             get { return PageHeading.InnerText; }
@@ -43,6 +42,7 @@ namespace HerokuTest
         #endregion
 
         #region Behaviours
+
         public VeryFirstCheckBoxesOnTheInternetPageModel CheckFirstCheckBox()
         {
             if (!this.CheckBoxes.First().Checked)
@@ -58,6 +58,5 @@ namespace HerokuTest
         }
 
         #endregion
-
     }
 }
